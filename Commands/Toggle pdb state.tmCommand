@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/bin/bash
+
+if [[ -z $TM_IPYTHON ]]; then
+	CMD='ipython'
+else
+	CMD=$TM_IPYTHON
+fi
+
+osascript &lt;&lt;- APPLESCRIPT
+        tell application "Terminal"
+                set currentTab to (selected tab of (get first window))
+                set tabProcs to processes of currentTab
+                set theProc to (end of tabProcs)
+                if theProc is not "Python" then
+                        set currentTab to (do script "$CMD")
+                end if
+        
+                do script "%pdb" in currentTab
+        end tell
+APPLESCRIPT</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Toggle pdb state</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>uuid</key>
+	<string>8D8CFBA5-3B71-4A3F-882B-9A461DD8C008</string>
+</dict>
+</plist>

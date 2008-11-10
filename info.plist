@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>mainMenu</key>
+	<dict>
+		<key>items</key>
+		<array>
+			<string>6393E2D4-B953-4A32-96A1-CB73A5DAF2D9</string>
+			<string>E33D56E8-D391-4788-A699-7371B22E0E67</string>
+			<string>------------------------------------</string>
+			<string>6B7352EB-E467-4C3B-8B6A-B268ACF9466E</string>
+			<string>------------------------------------</string>
+			<string>1C045812-FFC6-48B7-B7A3-EA2B5D56A855</string>
+		</array>
+		<key>submenus</key>
+		<dict>
+			<key>1C045812-FFC6-48B7-B7A3-EA2B5D56A855</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>8D8CFBA5-3B71-4A3F-882B-9A461DD8C008</string>
+					<string>CF1D8E92-F4D7-4E20-9376-0037D9552AA3</string>
+					<string>1DBBC316-15D8-4D72-A1B8-D928D644D7D4</string>
+				</array>
+				<key>name</key>
+				<string>Debugger actions</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>name</key>
+	<string>IPython</string>
+	<key>ordering</key>
+	<array>
+		<string>6B7352EB-E467-4C3B-8B6A-B268ACF9466E</string>
+		<string>6393E2D4-B953-4A32-96A1-CB73A5DAF2D9</string>
+		<string>E33D56E8-D391-4788-A699-7371B22E0E67</string>
+		<string>8D8CFBA5-3B71-4A3F-882B-9A461DD8C008</string>
+		<string>CF1D8E92-F4D7-4E20-9376-0037D9552AA3</string>
+		<string>1DBBC316-15D8-4D72-A1B8-D928D644D7D4</string>
+	</array>
+	<key>uuid</key>
+	<string>47B7578F-6F5F-4D20-813A-3BC3B3EF202A</string>
+</dict>
+</plist>
