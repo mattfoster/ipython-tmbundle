@@ -1,0 +1,4 @@
+TODO:
+
+* Re-factor the commands so that there's a single support library for pushing text to a Terminal. 
+* Learn about and implement useful '%' commands.
