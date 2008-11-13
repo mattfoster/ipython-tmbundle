@@ -2,6 +2,8 @@
 
 The IPython Bundle is a collection of commands designed to help you work with IPython form within TextMate. It was started after seeing [UsingIPythonWithTextMate](http://ipython.scipy.org/moin/Cookbook/UsingIPythonWithTextMate "Cookbook/UsingIPythonWithTextMate - IPython"), which contains the core commands on which this bundle is based. Kudos to Barry Wark for writing this page.
 
+Currently all commands are aliases to the shortcut `⌃⇧I` (Shift + Ctrl + I), and will only activate when the scope is `source.python`. The commands `Edit ipythonrc` and `View config directory` are available in all scopes.
+
 # Configuration
 
 If you wish to specify the arguments with which `ipython` is run, you can set `TM_IPYTHON` in TextMate's preferences. I recommend setting this variable to `ipthon -pylab -wthread`.
