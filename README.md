@@ -6,6 +6,9 @@ The IPython Bundle is a collection of commands designed to help you work with IP
 
 If you wish to specify the arguments with which `ipython` is run, you can set `TM_IPYTHON` in TextMate's preferences. I recommend setting this variable to `ipthon -pylab -wthread`.
 
+A simple language grammar for highlighting `ipythonrc` files in also included.
+You can switch the language grammar to the `ipythonrc` type by pressing `⌃⌥⇧I` (Shift + Cmd + Alt + I). A bundle command is also available for easy editing of the file (provided it lives under `~/.ipython`).
+
 # Installation
 
 This bundle is best installed using GetBundles. You can also clone it from GitHub, or download a tarball.

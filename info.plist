@@ -4,13 +4,12 @@
 <dict>
 	<key>mainMenu</key>
 	<dict>
-	<key>contactEmailRot13</key>
-  	<string>zngg.c.sbfgre@tznvy.pbz</string>
-  	<key>contactName</key>
-  	<string>Matt Foster</string>
-  	<key>description</key>
-  	<string>Support for IPython, an enhanced interactive environment for data visualisation, distribution computation and much more.</string>
-  
+		<key>contactEmailRot13</key>
+		<string>zngg.c.sbfgre@tznvy.pbz</string>
+		<key>contactName</key>
+		<string>Matt Foster</string>
+		<key>description</key>
+		<string>Support for IPython, an enhanced interactive environment for data visualisation, distribution computation and much more.</string>
 		<key>items</key>
 		<array>
 			<string>6393E2D4-B953-4A32-96A1-CB73A5DAF2D9</string>
@@ -45,6 +44,9 @@
 		<string>8D8CFBA5-3B71-4A3F-882B-9A461DD8C008</string>
 		<string>CF1D8E92-F4D7-4E20-9376-0037D9552AA3</string>
 		<string>1DBBC316-15D8-4D72-A1B8-D928D644D7D4</string>
+		<string>CCA5D37F-4070-4045-8A22-42A1B08D62AA</string>
+		<string>59D7CA34-7681-43E5-8964-53F132110218</string>
+		<string>745D8AEA-162A-47DE-B8D9-DD1421E1CFEE</string>
 	</array>
 	<key>uuid</key>
 	<string>47B7578F-6F5F-4D20-813A-3BC3B3EF202A</string>
