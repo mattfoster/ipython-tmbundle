@@ -10,17 +10,7 @@
 . "$TM_SUPPORT_PATH/lib/webpreview.sh"
 html_header "IPython Bundle Help" "IPython"
 
-"$TM_SUPPORT_PATH/lib/markdown_to_help.rb" &lt;&lt;'MARKDOWN'
-
-# Introduction
-
-The IPython Bundle is a collection of commands designed to help you work with IPython form within TextMate. It was started after seeing [UsingIPythonWithTextMate](http://ipython.scipy.org/moin/Cookbook/UsingIPythonWithTextMate "Cookbook/UsingIPythonWithTextMate - IPython"), which contains the core commands on which this bundle is based. Kudos to Barry Wark for writing this page.
-
-# Setup
-
-If you wish to specify the arguments with which `ipython` is run, you can set `TM_IPYTHON` in TextMate's preferences. I recommend setting this variable to `ipthon -pylab -wthread`.
-
-MARKDOWN
+cat "$TM_BUNDLE_PATH/README.md" | "$TM_SUPPORT_PATH/lib/markdown_to_help.rb"
 
 html_footer
 </string>
