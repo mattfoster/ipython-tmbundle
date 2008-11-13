@@ -4,6 +4,13 @@
 <dict>
 	<key>mainMenu</key>
 	<dict>
+	<key>contactEmailRot13</key>
+  	<string>zngg.c.sbfgre@tznvy.pbz</string>
+  	<key>contactName</key>
+  	<string>Matt Foster</string>
+  	<key>description</key>
+  	<string>Support for IPython, an enhanced interactive environment for data visualisation, distribution computation and much more.</string>
+  
 		<key>items</key>
 		<array>
 			<string>6393E2D4-B953-4A32-96A1-CB73A5DAF2D9</string>
