@@ -5,32 +5,28 @@
 	<key>beforeRunningCommand</key>
 	<string>saveActiveFile</string>
 	<key>command</key>
-	<string>#!/bin/bash
+	<string>#! /usr/bin/env python
+import sys, os
 
-if [[ -z $TM_IPYTHON ]]; then
-	CMD='ipython'
-else
-	CMD=$TM_IPYTHON
-fi
+sys.path.append(os.environ['TM_BUNDLE_SUPPORT'] + '/lib')
+from ipythonMate import *
 
-if [[ -z $TM_SELECTED_TEXT ]]; then
-	TEXT="$TM_CURRENT_LINE"
-else
-	TEXT="$TM_SELECTED_TEXT"
-fi 
-   
-osascript &lt;&lt;- APPLESCRIPT
-        tell application "Terminal"
-                set currentTab to (selected tab of (get first window))
-                set tabProcs to processes of currentTab
-                set theProc to (end of tabProcs)
-                if theProc is not "Python" then
-                        set currentTab to (do script "$CMD")
-                end if
-                
-                do script "$TEXT\n" in currentTab
-        end tell
-APPLESCRIPT</string>
+try:
+	cmd=os.environ['TM_IPYTHON']
+except KeyError:
+	cmd='ipython'
+
+try:
+  try:
+    text=os.environ['TM_SELECTED_TEXT']
+  except KeyError:
+    text=os.environ['TM_CURRENT_LINE']
+except KeyError:
+  print "Error executing selection/line."
+  text="print 'Error executing selection/line.'"
+
+run_in_terminal(text, command=cmd)
+</string>
 	<key>fallbackInput</key>
 	<string>document</string>
 	<key>input</key>
@@ -38,7 +34,7 @@ APPLESCRIPT</string>
 	<key>name</key>
 	<string>Run selection / line</string>
 	<key>output</key>
-	<string>discard</string>
+	<string>showAsTooltip</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>uuid</key>

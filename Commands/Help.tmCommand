@@ -23,7 +23,7 @@ html_footer
 	<key>name</key>
 	<string>Help</string>
 	<key>output</key>
-	<string>showAsHTML</string>
+	<string>showAsTooltip</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>uuid</key>
