@@ -4,7 +4,7 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string>ipythonrc</string>
+		<string>*ipythonrc</string>
 	</array>
 	<key>foldingStartMarker</key>
 	<string>/\*\*|\{\s*$</string>
@@ -42,7 +42,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(autocall|autoedit_syntax|autoindent|automagic|color_info|confirm_exit|deep_reload|editor|log|banner|messages|pdb|pprint|pylab_import_all|quick|readline|wildcards_case_sensitive|object_info_string_level|multi_line_specials|system_verbose|wxversion|)\b</string>
+			<string>\b(autocall|autoedit_syntax|autoindent|automagic|classic|color_info|confirm_exit|deep_reload|editor|include|log|logfile|banner|messages|nosep|pdb|pprint|pylab_import_all|quick|readline|wildcards_case_sensitive|object_info_string_level|multi_line_specials|system_verbose|wxversion|)\b</string>
 			<key>name</key>
 			<string>keyword.config.boolean.ipython-config</string>
 		</dict>
@@ -54,13 +54,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(colors|prompt_in1, prompt_in2|prompt_out|seperate_in|seperate_out|seperate_out2|xmode|)\b</string>
+			<string>\b(colors|prompt_in1|prompt_in2|prompt_out|prompts_pad_left|separate_in|separate_out|separate_out2|xmode|system_header)\b</string>
 			<key>name</key>
 			<string>keyword.config.string.ipython-config</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(readline_parse_and_bind|readline_remove_delims|readline_merge_completions|readline_omit_names|)\b</string>
+			<string>\b(readline_parse_and_bind|readline_remove_delims|readline_merge_completions|readline_omit__names)\b</string>
 			<key>name</key>
 			<string>keyword.config.readline.ipython-config</string>
 		</dict>
@@ -89,19 +89,62 @@
 			<string>keyword.config.alias.ipython-config</string>
 		</dict>
 		<dict>
+			<key>match</key>
+			<string>\b(Plain|Context|Verbose)\b</string>
+			<key>name</key>
+			<string>constant.exception-mode.ipython-config</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(Linux|LightBG|NoColor)\b</string>
+			<key>name</key>
+			<string>constant.color-scheme.ipython-config</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(complete|menu-complete)\b</string>
+			<key>name</key>
+			<string>constant.completion-mode.readline.ipython-config</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>likely (very) imcomplete, just copied from example config</string>
+			<key>match</key>
+			<string>\b(possible-completions|tab-insert|reverse-search-history|forward-search-history|history-search-forward|history-search-backward|kill-line|unix-line-discard)\b</string>
+			<key>name</key>
+			<string>constant.bindings.readline.ipython-config</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>"</string>
 			<key>end</key>
 			<string>"</string>
 			<key>name</key>
-			<string>string.quoted.double.untitled</string>
+			<string>string.quoted.double.ipython-config</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
 					<string>\\.</string>
 					<key>name</key>
-					<string>constant.character.escape.untitled</string>
+					<string>constant.character.escape.ipython-config</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>'</string>
+			<key>end</key>
+			<string>'</string>
+			<key>name</key>
+			<string>string.quoted.single.ipython-config</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\.</string>
+					<key>name</key>
+					<string>constant.character.escape.ipython-config</string>
 				</dict>
 			</array>
 		</dict>
