@@ -1,5 +1,5 @@
 TODO:
 
-* Re-factor the commands so that there's a single support library for pushing text to a Terminal. 
+* Improve the applescript, such that it searches Terminal.app for Python instances, and switches to the correct tab. If this is possible!.
+* Investigate some kind of communication with IPython. Is is possible to make the bundle aware of IPython's current state?
 * Learn about and implement useful '%' (magic) commands.
-* Think of decent keyboard shortcuts.
