@@ -19,7 +19,7 @@ except KeyError:
 text="%run -e -i -n '$TM_FILEPATH'"
 
 run_in_terminal(text, command=cmd)
-</string>
+notify_with_growl("IPython Script", 'Ran ' + os.path.basename(os.environ.get('TM_FILEPATH')))</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
@@ -27,7 +27,7 @@ run_in_terminal(text, command=cmd)
 	<key>name</key>
 	<string>Run file</string>
 	<key>output</key>
-	<string>showAsTooltip</string>
+	<string>discard</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>uuid</key>

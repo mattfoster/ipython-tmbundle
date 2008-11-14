@@ -33,7 +33,7 @@ run_in_terminal(text + '?', command=cmd)</string>
 	<key>name</key>
 	<string>Help on current word</string>
 	<key>output</key>
-	<string>showAsTooltip</string>
+	<string>discard</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>uuid</key>

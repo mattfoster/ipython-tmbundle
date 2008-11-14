@@ -11,6 +11,7 @@ import sys, os
 sys.path.append(os.environ['TM_BUNDLE_SUPPORT'] + '/lib')
 from ipythonMate import *
 
+# Catching KeyErrors may not be the best way of doing this.
 try:
 	cmd=os.environ['TM_IPYTHON']
 except KeyError:
@@ -25,8 +26,7 @@ except KeyError:
   print "Error executing selection/line."
   text="print 'Error executing selection/line.'"
 
-run_in_terminal(text, command=cmd)
-</string>
+run_in_terminal(text, command=cmd)</string>
 	<key>fallbackInput</key>
 	<string>document</string>
 	<key>input</key>
@@ -36,7 +36,7 @@ run_in_terminal(text, command=cmd)
 	<key>name</key>
 	<string>Run selection / line</string>
 	<key>output</key>
-	<string>showAsTooltip</string>
+	<string>discard</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>uuid</key>

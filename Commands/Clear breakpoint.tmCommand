@@ -17,7 +17,12 @@ except KeyError:
 	cmd='ipython'
 
 run_in_terminal('clear $TM_FILEPATH:$TM_LINE_NUMBER', command=cmd)
-</string>
+
+text = ('Cleared breakpoint from: ' + 
+  os.path.basename(os.environ.get('TM_FILEPATH')) + ' on line ' +
+  os.environ.get('TM_LINE_NUMBER'))
+
+notify_with_growl("IPython Script", text)</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
@@ -25,7 +30,7 @@ run_in_terminal('clear $TM_FILEPATH:$TM_LINE_NUMBER', command=cmd)
 	<key>name</key>
 	<string>Clear breakpoint</string>
 	<key>output</key>
-	<string>showAsTooltip</string>
+	<string>discard</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>uuid</key>

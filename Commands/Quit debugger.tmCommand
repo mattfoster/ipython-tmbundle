@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
-	<string>saveActiveFile</string>
+	<string>nop</string>
 	<key>command</key>
 	<string>#! /usr/bin/env python
 import sys, os
@@ -16,24 +16,19 @@ try:
 except KeyError:
 	cmd='ipython'
 
-run_in_terminal('break $TM_FILEPATH:$TM_LINE_NUMBER', command=cmd)
-
-text = ('Added breakpoint to: ' + 
-  os.path.basename(os.environ.get('TM_FILEPATH')) + ' on line ' +
-  os.environ.get('TM_LINE_NUMBER'))
-
-notify_with_growl("IPython Script", text)</string>
+run_in_terminal('quit', command=cmd)
+notify_with_growl("IPython Script", 'Quit debugger (pdb)')</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
 	<string>^I</string>
 	<key>name</key>
-	<string>Add breakpoint</string>
+	<string>Quit debugger</string>
 	<key>output</key>
 	<string>discard</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>uuid</key>
-	<string>CF1D8E92-F4D7-4E20-9376-0037D9552AA3</string>
+	<string>DC0C8216-B418-4584-94A9-AB0E732854E4</string>
 </dict>
 </plist>
