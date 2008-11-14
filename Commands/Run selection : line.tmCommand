@@ -31,6 +31,8 @@ run_in_terminal(text, command=cmd)
 	<string>document</string>
 	<key>input</key>
 	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^I</string>
 	<key>name</key>
 	<string>Run selection / line</string>
 	<key>output</key>

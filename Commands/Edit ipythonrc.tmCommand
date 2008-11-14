@@ -11,6 +11,8 @@ open ~/.ipython/ipythonrc -a 'TextMate'
 </string>
 	<key>input</key>
 	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^I</string>
 	<key>name</key>
 	<string>Edit ipythonrc</string>
 	<key>output</key>

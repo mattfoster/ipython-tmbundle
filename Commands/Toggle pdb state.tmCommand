@@ -20,6 +20,8 @@ run_in_terminal('%pdb', command=cmd)
 </string>
 	<key>input</key>
 	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^I</string>
 	<key>name</key>
 	<string>Toggle pdb state</string>
 	<key>output</key>

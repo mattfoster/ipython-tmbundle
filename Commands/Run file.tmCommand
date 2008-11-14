@@ -22,6 +22,8 @@ run_in_terminal(text, command=cmd)
 </string>
 	<key>input</key>
 	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^I</string>
 	<key>name</key>
 	<string>Run file</string>
 	<key>output</key>

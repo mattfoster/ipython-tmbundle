@@ -20,6 +20,8 @@ run_in_terminal('break $TM_FILEPATH:$TM_LINE_NUMBER', command=cmd)
 </string>
 	<key>input</key>
 	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^I</string>
 	<key>name</key>
 	<string>Add breakpoint</string>
 	<key>output</key>
