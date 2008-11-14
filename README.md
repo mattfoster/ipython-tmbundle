@@ -4,6 +4,10 @@ The IPython Bundle is a collection of commands designed to help you work with IP
 
 Currently all commands are aliases to the shortcut `⌃⇧I` (Shift + Ctrl + I), and will only activate when the scope is `source.python`. The commands `Edit ipythonrc` and `View config directory` are available in all scopes.
 
+Please be aware that this bundle know **nothing** of the state of the running IPython. This means that repeated calls may not have the effect you expected.
+
+Also note that if you have a running IPython instance that you want to be detected, you should switch its tab to front. 
+
 # Configuration
 
 If you wish to specify the arguments with which `ipython` is run, you can set `TM_IPYTHON` in TextMate's preferences. I recommend setting this variable to `ipthon -pylab -wthread`.
