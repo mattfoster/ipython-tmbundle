@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#! /usr/bin/env python
+import sys, os
+
+sys.path.append(os.environ['TM_BUNDLE_SUPPORT'] + '/lib')
+from ipythonMate import *
+
+try:
+	cmd=os.environ['TM_IPYTHON']
+except KeyError:
+	cmd='ipython'
+
+try:
+	prun_options = os.environ['TM_PRUN_OPTIONS'] + ' '
+except KeyError:
+	prun_options = ''
+
+try:
+	run_options = os.environ['TM_RUN_OPTIONS'] + ' '
+except KeyError:
+	run_options = '-e -i -n '
+
+
+
+text='%run ' + run_options + '-p ' + prun_options + '$TM_FILEPATH'
+
+run_in_terminal(text, command=cmd)
+notify_with_growl("IPython Script", 'Ran ' + os.path.basename(os.environ.get('TM_FILEPATH')) ' through profiler')</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^I</string>
+	<key>name</key>
+	<string>Run file through profiler</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>uuid</key>
+	<string>4E1CF9F5-8C5A-4353-A164-4828C4808830</string>
+</dict>
+</plist>
