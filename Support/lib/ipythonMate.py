@@ -4,6 +4,8 @@
 
 import os
 
+# Applescript functions:
+
 def run_in_terminal(text, proc_name='Python', app_name='Terminal', command='ipython'):
   """run the supplied `text` in a terminal (or supplied `app_name`)"""
   cmd = """osascript <<- APPLESCRIPT
@@ -19,7 +21,7 @@ def run_in_terminal(text, proc_name='Python', app_name='Terminal', command='ipyt
           end tell 
   APPLESCRIPT""" % (app_name, proc_name, command, text)
   os.system(cmd)
-  
+
 def notify_with_growl(title, description):
     cmd = """osascript <<- APPLESCRIPT
     tell application "GrowlHelperApp"

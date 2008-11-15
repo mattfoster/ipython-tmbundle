@@ -28,6 +28,11 @@ def connect(server):
         IPYSERVER.connect(os.path.expanduser(server))
     except:
         IPYSERVER = None
+        
+    if IPYSERVER != None:
+        return True
+    else:
+        return False
 
 def disconnect():
     if IPYSERVER:
