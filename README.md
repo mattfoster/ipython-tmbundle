@@ -15,6 +15,19 @@ If you wish to specify the arguments with which `ipython` is run, you can set `T
 A simple language grammar for highlighting `ipythonrc` files in also included.
 You can switch the language grammar to the `ipythonrc` type by pressing `⌃⌥⇧I` (Shift + Cmd + Alt + I). A bundle command is also available for easy editing of the file (provided it lives under `~/.ipython`).
 
+# Socket Support
+
+Socket support is very much **work in progress**. 
+
+It is currently possible to connect to the IPYthon vim server extension (`ipy_vimserver`), although support is currently limited to a few test commands. To do this, fire up IPYthon, and enable the server using:
+
+    import ipy_vimserver
+    ipy_vimserver.setup('sessionname')
+
+This will create a unix socket in `~/.ipython/` which you can then connect to using the bundle's `Connect to IPYthon server command`.
+
+This command should detect multiple sessions and ask which to connect to. Please note it is not possible to connect to multiple IPYthon servers.
+
 # Installation
 
 This bundle is best installed using GetBundles. You can also clone it from GitHub, or download a tarball.
