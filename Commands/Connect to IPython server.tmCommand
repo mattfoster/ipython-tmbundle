@@ -31,8 +31,7 @@ if connected:
 else:
 	notify_with_growl("IPython Script", 'Failed to connect to IPython session: ' + sock)
 
-client.send('whos')
-
+client.send('print "TextMate Connection estabilished"\n\r')
 </string>
 	<key>input</key>
 	<string>none</string>
@@ -41,7 +40,7 @@ client.send('whos')
 	<key>name</key>
 	<string>Connect to IPython server</string>
 	<key>output</key>
-	<string>afterSelectedText</string>
+	<string>discard</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>uuid</key>
