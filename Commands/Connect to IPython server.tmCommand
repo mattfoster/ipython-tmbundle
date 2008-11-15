@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env python
+# Command to test the use of a dialog.
+
+import sys, os
+sys.path.append(os.environ['TM_SUPPORT_PATH'] + '/lib')
+sys.path.append(os.environ['TM_BUNDLE_SUPPORT'] + '/lib')
+import dialog
+from ipythonMate import *
+import ipythonClient as client
+
+# Choose socket to connect to
+sockets = client.list_sockets('~/.ipython/')
+if len(sockets) &gt; 1:
+	sock = dialog.menu(sockets)
+else:
+	sock = sockets[0]
+
+full_sock = os.path.join('~/.ipython/', sock)
+
+connected = client.connect(full_sock)
+
+if connected: 
+	notify_with_growl("IPython Script", 'Connected to IPython session: ' + sock)
+else:
+	notify_with_growl("IPython Script", 'Failed to connect to IPython session: ' + sock)
+
+client.send('whos')
+
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^I</string>
+	<key>name</key>
+	<string>Connect to IPython server</string>
+	<key>output</key>
+	<string>afterSelectedText</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>uuid</key>
+	<string>280E16F1-814E-4B3A-BB65-97F3F4B71670</string>
+</dict>
+</plist>
