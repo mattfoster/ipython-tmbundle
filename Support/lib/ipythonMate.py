@@ -4,6 +4,17 @@
 
 import os
 
+# Utility functions:
+
+def get_ipython_cmd():
+    """docstring for get_ipython_cmd"""
+    try:
+    	cmd=os.environ['TM_IPYTHON']
+    except KeyError:
+    	cmd='ipython'
+    
+    return cmd
+
 # Applescript functions:
 
 def run_in_terminal(text, proc_name='Python', app_name='Terminal', command='ipython'):
