@@ -19,7 +19,7 @@ def get_ipython_cmd():
 
 def run_in_terminal(text, proc_name='Python', app_name='Terminal', command='ipython'):
   """run the supplied `text` in a terminal (or supplied `app_name`)"""
-  cmd = """osascript <<- APPLESCRIPT
+  cmd = """osascript 2>&1>/dev/null<<- APPLESCRIPT
           tell application "%s"
                   set currentTab to (selected tab of (get first window))
                   set tabProcs to processes of currentTab
@@ -33,6 +33,23 @@ def run_in_terminal(text, proc_name='Python', app_name='Terminal', command='ipyt
   APPLESCRIPT""" % (app_name, proc_name, command, text)
   os.system(cmd)
 
+
+def open_in_terminal(text, app_name='Terminal', command='ipython'):
+    """Slightly different method (from Octave.app)"""
+    cmd="""osascript 2>&1>/dev/null <<-EOF
+        tell application "System Events" to set ProcessList to get name of every process
+        tell application "%s" 
+          activate
+          if ProcessList contains "%s" then
+            do script "%s"
+          else
+            do script "%s" in front window
+          end if
+          do script "%s" in front window
+        end tell
+    EOF""" % (app_name, app_name, command, command, text)
+    os.system(cmd)
+  
 def notify_with_growl(title, description):
     cmd = """osascript <<- APPLESCRIPT
     tell application "GrowlHelperApp"
