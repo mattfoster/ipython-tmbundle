@@ -16,9 +16,13 @@ try:
 except KeyError:
 	cmd='ipython'
 
-session='ipython-session'
+try:
+	session=os.environ['TM_IPYTHON_DEFAULT_SESSION']
+except KeyError:
+	session='ipython-session'
+
 run = "import ipy_vimserver; ipy_vimserver.setup('%s')" % session
-run_in_terminal(run, command=cmd)
+open_in_terminal(run, command=cmd)
 
 notify_with_growl("IPython Script", 'Opened IPython with session name: %s' % session)</string>
 	<key>input</key>
@@ -28,9 +32,7 @@ notify_with_growl("IPython Script", 'Opened IPython with session name: %s' % ses
 	<key>name</key>
 	<string>Open IPython</string>
 	<key>output</key>
-	<string>discard</string>
-	<key>scope</key>
-	<string>source.python</string>
+	<string>showAsTooltip</string>
 	<key>uuid</key>
 	<string>917DBCDD-450D-43C7-9AC5-B701A066CD4F</string>
 </dict>
