@@ -6,7 +6,6 @@ from stat import *
 
 # Adapted from ipy.vim (vim / ipython server)
 # In TextMate, we can't rely on environment variables set in a terminal
-# So I need to remove the IPY_SERVER stuff
 
 IPYSERVER = None
 
@@ -64,3 +63,19 @@ def list_sockets(path='~/.ipython/'):
         return S_ISSOCK(md)
 
     return filter(is_sock, files)
+
+def determine_socket():
+    import dialog
+    """Find out which socket to connect to"""
+    # Choose socket to connect to
+    sockets = list_sockets('~/.ipython/')
+    if len(sockets) > 1:
+    	sock = dialog.menu(sockets)
+    else:
+    	sock = sockets[0]
+
+    if sock == None:
+        return None
+    else:
+        return os.path.join('~/.ipython/', sock)
+        
