@@ -17,11 +17,9 @@
 			<string>------------------------------------</string>
 			<string>89F2DFCC-43F1-4F56-9365-969DC06475BC</string>
 			<string>------------------------------------</string>
-			<string>917DBCDD-450D-43C7-9AC5-B701A066CD4F</string>
-			<string>280E16F1-814E-4B3A-BB65-97F3F4B71670</string>
+			<string>71B163B0-6ADF-4658-BDA8-1242B689FEDB</string>
 			<string>------------------------------------</string>
-			<string>CCA5D37F-4070-4045-8A22-42A1B08D62AA</string>
-			<string>D0544006-F3D5-484B-9D86-E6C11B765151</string>
+			<string>E211761F-0605-434C-923C-074D76DB29F6</string>
 			<string>------------------------------------</string>
 			<string>9F3538AE-8DD0-420F-84CD-BDBE5E95A295</string>
 			<string>------------------------------------</string>
@@ -44,6 +42,16 @@
 				</array>
 				<key>name</key>
 				<string>Debugger actions</string>
+			</dict>
+			<key>71B163B0-6ADF-4658-BDA8-1242B689FEDB</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>917DBCDD-450D-43C7-9AC5-B701A066CD4F</string>
+					<string>280E16F1-814E-4B3A-BB65-97F3F4B71670</string>
+				</array>
+				<key>name</key>
+				<string>Housekeeping</string>
 			</dict>
 			<key>89F2DFCC-43F1-4F56-9365-969DC06475BC</key>
 			<dict>
@@ -84,6 +92,16 @@
 				</array>
 				<key>name</key>
 				<string>Applescript Commands (deprecated)</string>
+			</dict>
+			<key>E211761F-0605-434C-923C-074D76DB29F6</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>CCA5D37F-4070-4045-8A22-42A1B08D62AA</string>
+					<string>D0544006-F3D5-484B-9D86-E6C11B765151</string>
+				</array>
+				<key>name</key>
+				<string>Configuration</string>
 			</dict>
 		</dict>
 	</dict>
