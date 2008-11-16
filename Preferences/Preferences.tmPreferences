@@ -16,6 +16,12 @@
 				<key>value</key>
 				<string># </string>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>TM_IPYTHON_DEFAULT_SESSION</string>
+				<key>value</key>
+				<string>ipython-session</string>
+			</dict>
 		</array>
 	</dict>
 	<key>uuid</key>
