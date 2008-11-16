@@ -51,7 +51,7 @@ def open_in_terminal(text, app_name='Terminal', command='ipython'):
     os.system(cmd)
   
 def notify_with_growl(title, description):
-    cmd = """osascript <<- APPLESCRIPT
+    cmd = """osascript 2>&1>/dev/null<<- APPLESCRIPT
     tell application "GrowlHelperApp"
     	-- Make a list of all the notification types 
     	-- that this script will ever send:
