@@ -30,15 +30,23 @@
 			<key>match</key>
 			<string>^\s*(#).*$\n?</string>
 			<key>name</key>
-			<string>comment.line.number-sign.ipthon-config</string>
+			<string>comment.line.number-sign.ipython-config</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.ipython-config</string>
+				</dict>
+			</dict>
 			<key>comment</key>
-			<string>may not appear part way through a line</string>
+			<string>may not appear part way through a line. hilights the entire line if there is a problem</string>
 			<key>match</key>
-			<string>^\s*\w+\s*(#).*$\n?</string>
+			<string>^.*\w+\s*(#).*$\n?</string>
 			<key>name</key>
-			<string>invalid.illegal.comment.ipthon-config</string>
+			<string>invalid.illegal.comment.number-sign.ipython-config</string>
 		</dict>
 		<dict>
 			<key>match</key>
