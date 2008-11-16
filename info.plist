@@ -6,26 +6,29 @@
 	<dict>
 		<key>items</key>
 		<array>
-			<string>6393E2D4-B953-4A32-96A1-CB73A5DAF2D9</string>
-			<string>E33D56E8-D391-4788-A699-7371B22E0E67</string>
+			<string>842C84A4-49F2-4114-BAFF-D1D128F3AC9B</string>
+			<string>F1780FD5-29EA-44FC-A8FA-95914849493E</string>
 			<string>------------------------------------</string>
-			<string>4E1CF9F5-8C5A-4353-A164-4828C4808830</string>
-			<string>41C246D6-4276-455B-9548-3868AAA44665</string>
+			<string>C9C0BB08-AA1B-49FC-99DD-00B7DC2ACA7C</string>
+			<string>C2D61E69-5FB8-484D-8594-FBB5FEDAC20B</string>
 			<string>------------------------------------</string>
-			<string>1C045812-FFC6-48B7-B7A3-EA2B5D56A855</string>
+			<string>6324ACAA-3C18-4D11-A522-EFAFE2309E53</string>
+			<string>FA66D477-876F-44E0-877E-5763E0F0A1F0</string>
+			<string>------------------------------------</string>
+			<string>89F2DFCC-43F1-4F56-9365-969DC06475BC</string>
+			<string>------------------------------------</string>
+			<string>917DBCDD-450D-43C7-9AC5-B701A066CD4F</string>
+			<string>280E16F1-814E-4B3A-BB65-97F3F4B71670</string>
 			<string>------------------------------------</string>
 			<string>CCA5D37F-4070-4045-8A22-42A1B08D62AA</string>
 			<string>D0544006-F3D5-484B-9D86-E6C11B765151</string>
-			<string>------------------------------------</string>
-			<string>F79EC27D-FE70-4530-A664-BBE68ED6B8CE</string>
-			<string>35250364-CE2B-453B-897A-173CD87E76BC</string>
 			<string>------------------------------------</string>
 			<string>9F3538AE-8DD0-420F-84CD-BDBE5E95A295</string>
 			<string>------------------------------------</string>
 			<string>6B7352EB-E467-4C3B-8B6A-B268ACF9466E</string>
 			<string>112295B4-E6F7-4326-961B-5A4CE333F437</string>
 			<string>------------------------------------</string>
-			<string>89F2DFCC-43F1-4F56-9365-969DC06475BC</string>
+			<string>CD06D8D3-E1E0-4133-80EA-2827E2E61B18</string>
 		</array>
 		<key>submenus</key>
 		<dict>
@@ -46,10 +49,14 @@
 			<dict>
 				<key>items</key>
 				<array>
-					<string>280E16F1-814E-4B3A-BB65-97F3F4B71670</string>
+					<string>2A5AF44C-E27E-4541-A3A1-BCEEEBCCDF2D</string>
+					<string>38981049-1CE5-4F7D-89DD-7A1308F677AB</string>
+					<string>B8F434E4-7EBA-416D-BA9E-6314F354057C</string>
+					<string>4C792E45-7E00-4927-9533-B89C88C0BEEE</string>
+					<string>1776A822-D423-4220-8BA6-4F3B7E934FCB</string>
 				</array>
 				<key>name</key>
-				<string>Socket Server Commands</string>
+				<string>Debugger commands</string>
 			</dict>
 			<key>9F3538AE-8DD0-420F-84CD-BDBE5E95A295</key>
 			<dict>
@@ -60,6 +67,24 @@
 				<key>name</key>
 				<string>Snippets</string>
 			</dict>
+			<key>CD06D8D3-E1E0-4133-80EA-2827E2E61B18</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>6393E2D4-B953-4A32-96A1-CB73A5DAF2D9</string>
+					<string>E33D56E8-D391-4788-A699-7371B22E0E67</string>
+					<string>------------------------------------</string>
+					<string>4E1CF9F5-8C5A-4353-A164-4828C4808830</string>
+					<string>41C246D6-4276-455B-9548-3868AAA44665</string>
+					<string>------------------------------------</string>
+					<string>1C045812-FFC6-48B7-B7A3-EA2B5D56A855</string>
+					<string>------------------------------------</string>
+					<string>F79EC27D-FE70-4530-A664-BBE68ED6B8CE</string>
+					<string>35250364-CE2B-453B-897A-173CD87E76BC</string>
+				</array>
+				<key>name</key>
+				<string>Applescript Commands (deprecated)</string>
+			</dict>
 		</dict>
 	</dict>
 	<key>name</key>
@@ -68,6 +93,7 @@
 	<array>
 		<string>6B7352EB-E467-4C3B-8B6A-B268ACF9466E</string>
 		<string>2C4EB353-B2F2-4CA5-A10A-7E9F1349FD61</string>
+		<string>917DBCDD-450D-43C7-9AC5-B701A066CD4F</string>
 		<string>DC0C8216-B418-4584-94A9-AB0E732854E4</string>
 		<string>6393E2D4-B953-4A32-96A1-CB73A5DAF2D9</string>
 		<string>4E1CF9F5-8C5A-4353-A164-4828C4808830</string>
@@ -85,6 +111,17 @@
 		<string>745D8AEA-162A-47DE-B8D9-DD1421E1CFEE</string>
 		<string>112295B4-E6F7-4326-961B-5A4CE333F437</string>
 		<string>280E16F1-814E-4B3A-BB65-97F3F4B71670</string>
+		<string>842C84A4-49F2-4114-BAFF-D1D128F3AC9B</string>
+		<string>F1780FD5-29EA-44FC-A8FA-95914849493E</string>
+		<string>C2D61E69-5FB8-484D-8594-FBB5FEDAC20B</string>
+		<string>2A5AF44C-E27E-4541-A3A1-BCEEEBCCDF2D</string>
+		<string>1776A822-D423-4220-8BA6-4F3B7E934FCB</string>
+		<string>38981049-1CE5-4F7D-89DD-7A1308F677AB</string>
+		<string>6324ACAA-3C18-4D11-A522-EFAFE2309E53</string>
+		<string>FA66D477-876F-44E0-877E-5763E0F0A1F0</string>
+		<string>B8F434E4-7EBA-416D-BA9E-6314F354057C</string>
+		<string>4C792E45-7E00-4927-9533-B89C88C0BEEE</string>
+		<string>C9C0BB08-AA1B-49FC-99DD-00B7DC2ACA7C</string>
 	</array>
 	<key>uuid</key>
 	<string>47B7578F-6F5F-4D20-813A-3BC3B3EF202A</string>
