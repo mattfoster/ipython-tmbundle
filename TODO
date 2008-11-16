@@ -1,5 +1,12 @@
 TODO:
 
+* Using the socket based server (ipy_vimserver.y). How can I make the connection persistent, so that:
+
+    1. TM doesn't have to ask which session to connect to more that once 
+    (see plistlib.py?/pickle?)
+    - or -
+    2. I don't have to reconnect each time
+    
 * Improve the applescript, such that it searches Terminal.app for Python instances, and switches to the correct tab. If this is possible!.
-* Investigate some kind of communication with IPython. Is is possible to make the bundle aware of IPython's current state?
 * Learn about and implement useful '%' (magic) commands.
+
