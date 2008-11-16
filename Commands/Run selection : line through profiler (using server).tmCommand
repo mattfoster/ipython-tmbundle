@@ -48,7 +48,7 @@ else:
 	<key>keyEquivalent</key>
 	<string>^I</string>
 	<key>name</key>
-	<string>Run selection / line through profiler (using server)</string>
+	<string>Run selection / line through profiler</string>
 	<key>output</key>
 	<string>discard</string>
 	<key>scope</key>

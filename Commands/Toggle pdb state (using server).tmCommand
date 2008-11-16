@@ -34,7 +34,7 @@ else:
 	<key>keyEquivalent</key>
 	<string>^I</string>
 	<key>name</key>
-	<string>Toggle pdb state (using server)</string>
+	<string>Toggle pdb state</string>
 	<key>output</key>
 	<string>discard</string>
 	<key>scope</key>

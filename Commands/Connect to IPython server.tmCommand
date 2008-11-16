@@ -13,23 +13,27 @@ import time
 
 sys.path.append(os.environ['TM_SUPPORT_PATH'] + '/lib')
 sys.path.append(os.environ['TM_BUNDLE_SUPPORT'] + '/lib')
+
 import dialog
-from webpreview import *
+import webpreview
 from ipythonMate import *
 import ipythonClient as client
 
-html_header("IPython Server Conneciton Test", "Attempting to connect")
+print webpreview.html_header("IPython Server Connection Test", "")
 
 time_string = time.asctime()
 
-print """&lt;p&gt;If successful, you should see:&lt;br /&gt; 
-&lt;code&gt;&lt;pre&gt;TextMate Connection estabilished at %s&lt;/pre&gt;&lt;/code&gt; 
-in your IPython session.&lt;/p&gt;
-&lt;p&gt;You may also see the word 'AppleScript' above, and a Growl notification.&lt;/p&gt; 
+print """&lt;p&gt;If successful, you should see the follow text appear in your IPython session:&lt;/p&gt;
+ 
+&lt;code&gt;&lt;pre&gt;TextMate Connection established at %s&lt;/pre&gt;&lt;/code&gt;
 
-&lt;p&gt;You may need to select a session to connect to. If this is the case, you will see a small dialog box.&lt;/p&gt;
+&lt;p&gt;You should also see a Growl notification.&lt;/p&gt;
+
+&lt;o&gt;If you have more than one instance of IPYthon running, you may need to select which session to connect to. If this is the case, you will see a small dialog box. Note that ths dialog will no necessarily appear close to your editor window.&lt;/p&gt;
 
 """ % time_string
+
+print webpreview.html_footer()
 
 sock = client.determine_socket()
 if sock == None:
@@ -39,19 +43,17 @@ else:
 
 if connected: 
 	notify_with_growl("IPython Script", 'Connected to IPython session: ' + os.path.basename(sock))
-	client.send('print "TextMate Connection estabilished at %s"\n\r' % time_string)
+	client.send('print "TextMate Connection established at %s"\n\r' % time_string)
 	client.disconnect()
 else:
 	notify_with_growl("IPython Script", 'Failed to connect to IPython session')
-
-
-html_footer()</string>
+</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
 	<string>^I</string>
 	<key>name</key>
-	<string>Test IPython server connection</string>
+	<string>Test connection to IPython server</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>

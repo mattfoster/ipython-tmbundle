@@ -32,7 +32,7 @@ else:
 	<key>keyEquivalent</key>
 	<string>^I</string>
 	<key>name</key>
-	<string>Quit debugger (using server)</string>
+	<string>Quit debugger</string>
 	<key>output</key>
 	<string>discard</string>
 	<key>scope</key>

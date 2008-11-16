@@ -36,7 +36,7 @@ else:
 	<key>keyEquivalent</key>
 	<string>^I</string>
 	<key>name</key>
-	<string>Enter debugger (using server)</string>
+	<string>Enter debugger</string>
 	<key>output</key>
 	<string>discard</string>
 	<key>scope</key>

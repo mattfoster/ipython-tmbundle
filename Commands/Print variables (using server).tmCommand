@@ -33,7 +33,7 @@ else:
 	<key>keyEquivalent</key>
 	<string>^I</string>
 	<key>name</key>
-	<string>Print variables (using server)</string>
+	<string>Print variables</string>
 	<key>output</key>
 	<string>discard</string>
 	<key>scope</key>

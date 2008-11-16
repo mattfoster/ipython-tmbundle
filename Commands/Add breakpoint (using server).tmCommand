@@ -38,7 +38,7 @@ else:
 	<key>keyEquivalent</key>
 	<string>^I</string>
 	<key>name</key>
-	<string>Add breakpoint (using server)</string>
+	<string>Add breakpoint</string>
 	<key>output</key>
 	<string>discard</string>
 	<key>scope</key>
