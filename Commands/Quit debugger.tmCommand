@@ -20,8 +20,6 @@ run_in_terminal('quit', command=cmd)
 notify_with_growl("IPython Script", 'Quit debugger (pdb)')</string>
 	<key>input</key>
 	<string>none</string>
-	<key>keyEquivalent</key>
-	<string>^I</string>
 	<key>name</key>
 	<string>Quit debugger</string>
 	<key>output</key>

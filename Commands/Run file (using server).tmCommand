@@ -3,33 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
-	<string>nop</string>
+	<string>saveActiveFile</string>
 	<key>command</key>
 	<string>#!/usr/bin/env python
 # Command to test the use of a dialog.
 
 import sys, os
-import time
-
 sys.path.append(os.environ['TM_SUPPORT_PATH'] + '/lib')
 sys.path.append(os.environ['TM_BUNDLE_SUPPORT'] + '/lib')
 import dialog
-from webpreview import *
 from ipythonMate import *
 import ipythonClient as client
-
-html_header("IPython Server Conneciton Test", "Attempting to connect")
-
-time_string = time.asctime()
-
-print """&lt;p&gt;If successful, you should see:&lt;br /&gt; 
-&lt;code&gt;&lt;pre&gt;TextMate Connection estabilished at %s&lt;/pre&gt;&lt;/code&gt; 
-in your IPython session.&lt;/p&gt;
-&lt;p&gt;You may also see the word 'AppleScript' above, and a Growl notification.&lt;/p&gt; 
-
-&lt;p&gt;You may need to select a session to connect to. If this is the case, you will see a small dialog box.&lt;/p&gt;
-
-""" % time_string
 
 sock = client.determine_socket()
 if sock == None:
@@ -37,26 +21,26 @@ if sock == None:
 else:
 	connected = client.connect(sock)
 
+text="%run -e -i -n " + os.environ.get('TM_FILEPATH')
+
 if connected: 
-	notify_with_growl("IPython Script", 'Connected to IPython session: ' + os.path.basename(sock))
-	client.send('print "TextMate Connection estabilished at %s"\n\r' % time_string)
+	notify_with_growl("IPython Script", 'Ran ' + os.path.basename(os.environ.get('TM_FILEPATH')))
+	client.send(text)
 	client.disconnect()
 else:
 	notify_with_growl("IPython Script", 'Failed to connect to IPython session')
-
-
-html_footer()</string>
+</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
 	<string>^I</string>
 	<key>name</key>
-	<string>Test IPython server connection</string>
+	<string>Run file (using server)</string>
 	<key>output</key>
-	<string>showAsHTML</string>
+	<string>discard</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>uuid</key>
-	<string>280E16F1-814E-4B3A-BB65-97F3F4B71670</string>
+	<string>842C84A4-49F2-4114-BAFF-D1D128F3AC9B</string>
 </dict>
 </plist>

@@ -34,8 +34,6 @@ run_in_terminal(text, command=cmd)
 notify_with_growl("IPython Script", 'Ran ' + os.path.basename(os.environ.get('TM_FILEPATH')) ' through profiler')</string>
 	<key>input</key>
 	<string>none</string>
-	<key>keyEquivalent</key>
-	<string>^I</string>
 	<key>name</key>
 	<string>Run file through profiler</string>
 	<key>output</key>

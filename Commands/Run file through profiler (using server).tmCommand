@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/usr/bin/env python
+# Command to test the use of a dialog.
+
+import sys, os
+sys.path.append(os.environ['TM_SUPPORT_PATH'] + '/lib')
+sys.path.append(os.environ['TM_BUNDLE_SUPPORT'] + '/lib')
+import dialog
+from ipythonMate import *
+import ipythonClient as client
+
+sock = client.determine_socket()
+if sock == None:
+	connected = False
+else:
+	connected = client.connect(sock)
+
+try:
+	prun_options = os.environ['TM_PRUN_OPTIONS'] + ' '
+except KeyError:
+	prun_options = ''
+
+try:
+	run_options = os.environ['TM_RUN_OPTIONS'] + ' '
+except KeyError:
+	run_options = '-e -i -n '
+
+text='%run ' + run_options + '-p ' + prun_options + '  ' + os.environ.get('TM_FILEPATH')
+
+if connected: 
+	client.send(text)
+	client.disconnect()
+	notify_with_growl("IPython Script", 'Ran ' + os.path.basename(os.environ.get('TM_FILEPATH')) + ' through profiler')
+else:
+	notify_with_growl("IPython Script", 'Failed to connect to IPython session: ' + os.path.basename(sock))</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^I</string>
+	<key>name</key>
+	<string>Run file through profiler (using server)</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>uuid</key>
+	<string>C9C0BB08-AA1B-49FC-99DD-00B7DC2ACA7C</string>
+</dict>
+</plist>

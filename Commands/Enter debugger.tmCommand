@@ -20,8 +20,6 @@ run_in_terminal('%debug', command=cmd)
 notify_with_growl("IPython Script", 'Entered debugger (pdb)')</string>
 	<key>input</key>
 	<string>none</string>
-	<key>keyEquivalent</key>
-	<string>^I</string>
 	<key>name</key>
 	<string>Enter debugger</string>
 	<key>output</key>

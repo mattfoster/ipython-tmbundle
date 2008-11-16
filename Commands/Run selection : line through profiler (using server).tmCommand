@@ -5,17 +5,21 @@
 	<key>beforeRunningCommand</key>
 	<string>saveActiveFile</string>
 	<key>command</key>
-	<string>#! /usr/bin/env python
+	<string>#!/usr/bin/env python
+# Command to test the use of a dialog.
+
 import sys, os
-
+sys.path.append(os.environ['TM_SUPPORT_PATH'] + '/lib')
 sys.path.append(os.environ['TM_BUNDLE_SUPPORT'] + '/lib')
+import dialog
 from ipythonMate import *
+import ipythonClient as client
 
-# Catching KeyErrors may not be the best way of doing this.
-try:
-	cmd=os.environ['TM_IPYTHON']
-except KeyError:
-	cmd='ipython'
+sock = client.determine_socket()
+if sock == None:
+	connected = False
+else:
+	connected = client.connect(sock)
 
 try:
   try:
@@ -33,18 +37,23 @@ except KeyError:
 
 text = '%prun ' + prun_options + text
 
-run_in_terminal(text, command=cmd)</string>
-	<key>fallbackInput</key>
-	<string>document</string>
+# Only notify if there was a problem.
+if not connected: 
+	notify_with_growl("IPython Script", 'Failed to connect to IPython session: ' + os.path.basename(sock))
+else:
+	client.send(text + '\n')
+	client.disconnect()</string>
 	<key>input</key>
 	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^I</string>
 	<key>name</key>
-	<string>Run selection / line through profiler</string>
+	<string>Run selection / line through profiler (using server)</string>
 	<key>output</key>
 	<string>discard</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>uuid</key>
-	<string>41C246D6-4276-455B-9548-3868AAA44665</string>
+	<string>C2D61E69-5FB8-484D-8594-FBB5FEDAC20B</string>
 </dict>
 </plist>

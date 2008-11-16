@@ -20,8 +20,6 @@ run_in_terminal('%who', command=cmd)
 notify_with_growl("IPython Script", 'Toggled debugger (pdb) state')</string>
 	<key>input</key>
 	<string>none</string>
-	<key>keyEquivalent</key>
-	<string>^I</string>
 	<key>name</key>
 	<string>Print variables</string>
 	<key>output</key>
