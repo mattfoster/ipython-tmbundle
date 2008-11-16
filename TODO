@@ -1,4 +1,5 @@
-TODO:
+IPython Bundle Todo List:
+-------------------------
 
 * Using the socket based server (ipy_vimserver.y). How can I make the connection persistent, so that:
 
@@ -10,3 +11,6 @@ TODO:
 * Improve the applescript, such that it searches Terminal.app for Python instances, and switches to the correct tab. If this is possible!.
 * Learn about and implement useful '%' (magic) commands.
 
+# Syntax
+
+* Work out how to include `source.python` in the relevant bits of the config syntax.
