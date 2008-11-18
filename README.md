@@ -2,7 +2,7 @@
 
 The IPython Bundle is a collection of commands designed to help you work with IPython form within TextMate. It was started after seeing [UsingIPythonWithTextMate](http://ipython.scipy.org/moin/Cookbook/UsingIPythonWithTextMate "Cookbook/UsingIPythonWithTextMate - IPython"), which contained the core commands on which very early versions of this bundle were based. Kudos to Barry Wark for writing the commands on the wiki page.
 
-The bundle now uses the socket based server (`ipy_vimserver.py`) by Erich Heine, with a modified version of his client commands being used in the bundle. Please see the section 'Socket Support' for more information on how to set up the IPython side of things. The applescript commands are still available as a backup, if you prefer them over the socket based approach.
+The bundle now uses the socket based server (`ipy_vimserver.py`) by Erich Heine, with a modified version of his client commands being used in the bundle. Please see the section 'Socket Support' for more information on how to set up the IPython side of things. The applescript commands are still available as a backup, and are used to interact with `pdb`. If you prefer the applescript based approack over the socket based approach, the commands are available in the `AppleScript Commands` group.
 
 Currently most commands are aliased to the shortcut `⌃⇧I` (Shift + Ctrl + I), and will only activate when the scope is `source.python`. The commands `Edit ipythonrc` and `View config directory` are available in all scopes. The exceptions to this rule are the commands for opening IPython and editing configuration files.
 
