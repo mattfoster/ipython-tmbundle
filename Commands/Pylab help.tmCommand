@@ -8,9 +8,11 @@
 	<string>#!/usr/bin/env bash
 
 . "$TM_SUPPORT_PATH/lib/webpreview.sh"
-html_header "IPython Bundle Help" "IPython"
+html_header "IPython Quick Reference Card" "IPython"
 
-cat "$TM_BUNDLE_PATH/README.md" | "$TM_SUPPORT_PATH/lib/markdown_to_help.rb"
+echo "&lt;pre&gt;"
+ipython -pylab -c "help(pylab)"
+echo "&lt;/pre&gt;"
 
 html_footer
 </string>
@@ -21,12 +23,12 @@ html_footer
 	<key>keyEquivalent</key>
 	<string>^I</string>
 	<key>name</key>
-	<string>Bundle Documentation</string>
+	<string>Pylab help</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>uuid</key>
-	<string>6B7352EB-E467-4C3B-8B6A-B268ACF9466E</string>
+	<string>E625EBFA-49AD-42E5-BDCA-46AED36D0EA2</string>
 </dict>
 </plist>
