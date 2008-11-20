@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>open http://ipython.scipy.org/moin/Documentation</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^I</string>
+	<key>name</key>
+	<string>IPython Online Documentation</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>uuid</key>
+	<string>F9858577-03DB-4A08-84DE-15203A2BE9A7</string>
+</dict>
+</plist>

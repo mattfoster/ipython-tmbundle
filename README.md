@@ -14,16 +14,27 @@ If you wish to specify the arguments with which `ipython` is run, you can set `T
 
 # Socket Support
 
-Socket support is very much **work in progress**. 
+Socket support is still **work in progress**. That said, most of the bundle commands use this functionality, and work well.
 
-It is currently possible to connect to the IPython vim server extension (`ipy_vimserver`), although support is currently limited to a few test commands. To do this, fire up IPython, and enable the server using:
+To set up a socket server, fire up IPython, and type:
 
     import ipy_vimserver
     ipy_vimserver.setup('sessionname')
 
-This will create a unix socket in `~/.ipython/` which you can then connect to using the bundle's `Connect to IPYthon server command`.
+This will create a unix socket called `socketname`, in `~/.ipython/` which you can then connect to using the bundle's `Connect to IPYthon server command`.
 
-This command should detect multiple sessions and ask which to connect to. Please note it is not possible to connect to multiple IPython servers.
+This bundle should detect the existence of multiple sessions and ask which to
+connect to. Please note it is not currently possible to send text to multiple
+IPython servers at once, but there is no reason why it shouldn't be possible in future.
+
+The command `Open IPython` will open a terminal and start the server up for you. In addition, it should be fairly easy to add these commands to your config file. 
+
+To make this more robust, using something like: 
+
+    import ipy_vimserver
+    ipy_vimserver.setup('session-%6x' % time.time())
+
+Will give you a time-dependent socket name (with no extra `.` chars).
 
 # Configuration Files
 
