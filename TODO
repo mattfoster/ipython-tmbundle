@@ -18,3 +18,7 @@ IPython Bundle Todo List:
 # Syntax
 
 * Work out how to include `source.python` in the relevant bits of the config syntax.
+
+# Snippets
+
+* Add useful ipython related snippets. These could include pylab/scipy/numpy access or other related modules. 
