@@ -7,6 +7,10 @@ IPython Bundle Todo List:
     (see plistlib.py?/pickle?)
     - or -
     2. I don't have to reconnect each time
+
+* Modify ipy_vimserver.py to return status messages via the socket. That way we might know when the commands have finished running.
+* Find out how to add server-run commands to the history (if they really aren't already).
+* Find out how to get IPython to draw another prompt after running a remote command.
     
 * Improve the applescript, such that it searches Terminal.app for Python instances, and switches to the correct tab. If this is possible!.
 * Learn about and implement useful '%' (magic) commands.
