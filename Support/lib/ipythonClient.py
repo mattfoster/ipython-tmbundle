@@ -1,8 +1,8 @@
 import socket
 import os
 
-from os.path import *
-from stat import *
+from os.path import expanduser, join
+from stat import ST_MODE, S_ISSOCK
 
 # Adapted from ipy.vim (vim / ipython server)
 # In TextMate, we can't rely on environment variables set in a terminal
@@ -24,7 +24,7 @@ def connect(server):
         return
     try:
         IPYSERVER = socket.socket(socket.AF_UNIX)
-        IPYSERVER.connect(os.path.expanduser(server))
+        IPYSERVER.connect(expanduser(server))
     except:
         IPYSERVER = None
         
