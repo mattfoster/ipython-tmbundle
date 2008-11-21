@@ -59,10 +59,17 @@ def list_sockets(path='~/.ipython/'):
 
     # filter non-sockets
     def is_sock(f): 
-        md = os.stat(join(path+f))[ST_MODE]
+        md = os.stat(join(path,f))[ST_MODE]
         return S_ISSOCK(md)
 
     return filter(is_sock, files)
+
+def remove_sockets(path='~/.ipython/'):
+    """Remove all sockets in a given directory. 
+    Potentially destructive!"""
+    socks = list_sockets(path)
+    for sock in socks:
+        os.remove(sock)
 
 def determine_socket():
     """Find out which socket to connect to"""
