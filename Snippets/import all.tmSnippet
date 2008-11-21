@@ -3,14 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>plt.plot(${1:x}, ${2:y}, ${3:'${4:k}'})</string>
+	<string>import numpy as ${1:np}
+import scipy as ${2:sp}
+import matplotlib as ${3:mpl}
+import matplotlib.pylab as ${4:plt}</string>
 	<key>name</key>
-	<string>plot</string>
+	<string>import all</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>tabTrigger</key>
-	<string>plot</string>
+	<string>import all</string>
 	<key>uuid</key>
-	<string>745D8AEA-162A-47DE-B8D9-DD1421E1CFEE</string>
+	<string>207EB99B-65F0-4E68-A7F5-1A383F833D86</string>
 </dict>
 </plist>
