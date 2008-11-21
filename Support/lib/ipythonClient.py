@@ -71,10 +71,10 @@ def remove_sockets(path='~/.ipython/'):
     for sock in socks:
         os.remove(sock)
 
-def determine_socket():
+def determine_socket(path='~/.ipython/'):
     """Find out which socket to connect to"""
     
-    sockets = list_sockets('~/.ipython/')
+    sockets = list_sockets(path)
     
     try:
         import dialog
@@ -90,5 +90,5 @@ def determine_socket():
     if sock == None:
         return None
     else:
-        return os.path.join('~/.ipython/', sock)
+        return os.path.join(path, sock)
         
