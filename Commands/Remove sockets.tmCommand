@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#! /usr/bin/env python
+import sys, os
+
+sys.path.append(os.environ['TM_BUNDLE_SUPPORT'] + '/lib')
+from ipythonClient import remove_sockets
+
+# Should we ask about this?
+
+remove_sockets()
+
+print 'Removed sockets'</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^I</string>
+	<key>name</key>
+	<string>Remove sockets</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>source.python,</string>
+	<key>uuid</key>
+	<string>661F94B3-543F-4FD6-BA06-02F03CAA88C7</string>
+</dict>
+</plist>
