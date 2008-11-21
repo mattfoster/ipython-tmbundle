@@ -65,14 +65,20 @@ def list_sockets(path='~/.ipython/'):
     return filter(is_sock, files)
 
 def determine_socket():
-    import dialog
     """Find out which socket to connect to"""
-    # Choose socket to connect to
+    
     sockets = list_sockets('~/.ipython/')
-    if len(sockets) > 1:
-    	sock = dialog.menu(sockets)
-    else:
-    	sock = sockets[0]
+    
+    try:
+        import dialog
+        if len(sockets) > 1:
+        	sock = dialog.menu(sockets)
+        else:
+        	sock = sockets[0]
+        	
+    # If we aren't running from within TM use the first socket found.
+    except ImportError: 
+        sock = sockets[0]
 
     if sock == None:
         return None
