@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>import matplotlib.pylab as ${1:plt}</string>
+	<string>import matplotlib.pylab as ${1:plt}
+
+$0</string>
 	<key>name</key>
 	<string>import matplotlib.pylab as plt</string>
 	<key>scope</key>

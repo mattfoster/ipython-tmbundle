@@ -3,7 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>plt.xlabel("${1:xlabel}")</string>
+	<string>plt.xlabel("${1:xlabel}")
+$0</string>
 	<key>name</key>
 	<string>xlabel</string>
 	<key>scope</key>

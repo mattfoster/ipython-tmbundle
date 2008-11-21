@@ -6,7 +6,9 @@
 	<string>import numpy as ${1:np}
 import scipy as ${2:sp}
 import matplotlib as ${3:mpl}
-import matplotlib.pylab as ${4:plt}</string>
+import matplotlib.pylab as ${4:plt}
+
+$0</string>
 	<key>name</key>
 	<string>import all</string>
 	<key>scope</key>

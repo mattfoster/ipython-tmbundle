@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>import numpy as ${1:np}</string>
+	<string>import numpy as ${1:np}
+
+$0</string>
 	<key>name</key>
 	<string>import numpy as np</string>
 	<key>scope</key>

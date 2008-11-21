@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>import matplotlib as ${1:mpl}</string>
+	<string>import matplotlib as ${1:mpl}
+
+$0</string>
 	<key>name</key>
 	<string>import matplotlib as mpl</string>
 	<key>scope</key>
