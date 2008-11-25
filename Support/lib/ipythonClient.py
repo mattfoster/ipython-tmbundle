@@ -64,14 +64,15 @@ def list_sockets(path='~/.ipython/'):
 
     return filter(is_sock, files)
 
-def remove_sockets(path='~/.ipython/'):
+def remove_sockets(path='~/.ipython'):
     """Remove all sockets in a given directory. 
     Potentially destructive!"""
+    path = os.path.expanduser(path)
     socks = list_sockets(path)
     for sock in socks:
-        os.remove(sock)
+        os.remove(os.path.join(path, sock))
 
-def determine_socket(path='~/.ipython/'):
+def determine_socket(path='~/.ipython'):
     """Find out which socket to connect to"""
     
     sockets = list_sockets(path)
