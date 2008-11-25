@@ -6,16 +6,42 @@
 	<string>nop</string>
 	<key>command</key>
 	<string>#! /usr/bin/env python
-import sys, os
+
+import os
+import sys
+import subprocess
 
 sys.path.append(os.environ['TM_BUNDLE_SUPPORT'] + '/lib')
 from ipythonClient import remove_sockets
 
+def get_confirmation():
+    """get confirmation"""
+
+    support_path     = os.environ.get('TM_SUPPORT_PATH')
+    cocoa_dialog     = os.path.join(support_path, "bin/CocoaDialog.app/Contents/MacOS/CocoaDialog")
+
+    dtype            = "msgbox"
+    text             = '--text "This command will remove all sockets from .ipythonrc"'
+    icon             = '--icon "x"' 
+    informative_text = '--informative-text "There are files in the socket directory. They will be removed if you continue."' 
+    buttons          = '--button1 "Cancel Deletion" --button2 "Delete all"'
+
+    # Join args to build command.
+    args = ' '.join(["'%s'" % cocoa_dialog, dtype, text, icon, informative_text, buttons])
+
+    output = os.popen(args, 'r').read()
+    
+    if int(output) == 2:
+        return True
+    else: 
+        return False
+
 # Should we ask about this?
-
-remove_sockets()
-
-print 'Removed sockets'</string>
+if get_confirmation():
+    remove_sockets()
+    print 'Removed sockets'
+else:
+    print 'Cancelled operation'</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
