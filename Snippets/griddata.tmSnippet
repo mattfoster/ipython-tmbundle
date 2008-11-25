@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>plt.griddata(${1:x}, ${2:y}, ${3:z}, ${4:xi}, ${5:yi}) 
+$0</string>
+	<key>name</key>
+	<string>griddata</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>gr</string>
+	<key>uuid</key>
+	<string>772E7887-64E1-432C-A357-C3C393D2E695</string>
+</dict>
+</plist>
