@@ -19,6 +19,7 @@ def check_server():
 # connect to the ipython server, if we need to
 def connect(server):
     """Connect to the server given in the string `server` """
+    # print "Connecting to", expanduser(server)
     global IPYSERVER
     if check_server():
         return
@@ -27,7 +28,7 @@ def connect(server):
         IPYSERVER.connect(expanduser(server))
     except:
         IPYSERVER = None
-        
+                
     if IPYSERVER != None:
         return True
     else:
@@ -74,22 +75,21 @@ def remove_sockets(path='~/.ipython'):
 
 def determine_socket(path='~/.ipython'):
     """Find out which socket to connect to"""
-    
     sockets = list_sockets(path)
+
+    if not len(sockets):
+        return None
+
+    if len(sockets) == 1:
+        os.path.join(path, sockets[0])
     
     try:
         import dialog
-        if len(sockets) > 1:
-        	sock = dialog.menu(sockets)
-        else:
-        	sock = sockets[0]
-        	
-    # If we aren't running from within TM use the first socket found.
-    except ImportError: 
+        # If we aren't running from within TM use the first socket found.
+    except ImportError:
         sock = sockets[0]
-
-    if sock == None:
-        return None
     else:
-        return os.path.join(path, sock)
+        sock = dialog.menu(sockets)            
+
+    return os.path.join(path, sock)
         
