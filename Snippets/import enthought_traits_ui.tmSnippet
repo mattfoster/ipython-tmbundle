@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>import scipy as ${1:sp}
-$0</string>
+	<string>import enthought.traits.ui
+</string>
 	<key>name</key>
-	<string>import scipy as sp</string>
+	<string>import enthought.traits.ui</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>tabTrigger</key>
 	<string>import</string>
 	<key>uuid</key>
-	<string>0E8DE6A6-3CB3-40BC-8A6B-D03584550369</string>
+	<string>470F01E7-BACB-4819-B85C-9BABB2E85EC4</string>
 </dict>
 </plist>

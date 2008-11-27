@@ -4,14 +4,13 @@
 <dict>
 	<key>content</key>
 	<string>import matplotlib as ${1:mpl}
-
 $0</string>
 	<key>name</key>
 	<string>import matplotlib as mpl</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>tabTrigger</key>
-	<string>import mpl</string>
+	<string>import</string>
 	<key>uuid</key>
 	<string>EEE5D3C2-4D81-425A-9349-1CB25AD4F5A6</string>
 </dict>

@@ -3,15 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>import scipy as ${1:sp}
-$0</string>
+	<string>ch.plot(${1:x}, ${2:y}, ${3:'${4:k}'})</string>
 	<key>name</key>
-	<string>import scipy as sp</string>
+	<string>plot (chaco version)</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>tabTrigger</key>
-	<string>import</string>
+	<string>plot</string>
 	<key>uuid</key>
-	<string>0E8DE6A6-3CB3-40BC-8A6B-D03584550369</string>
+	<string>4B4B0FE8-415D-48B1-B843-BF4682094D88</string>
 </dict>
 </plist>

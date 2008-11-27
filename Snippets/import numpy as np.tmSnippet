@@ -4,14 +4,13 @@
 <dict>
 	<key>content</key>
 	<string>import numpy as ${1:np}
-
 $0</string>
 	<key>name</key>
 	<string>import numpy as np</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>tabTrigger</key>
-	<string>import np</string>
+	<string>import</string>
 	<key>uuid</key>
 	<string>ED63D122-EC19-4F7E-8A1B-EDF81E79B5BC</string>
 </dict>

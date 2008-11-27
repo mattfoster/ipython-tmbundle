@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>import scipy as ${1:sp}
+	<string>plt.xlabel("${1:xlabel}")
 $0</string>
 	<key>name</key>
-	<string>import scipy as sp</string>
+	<string>xlabel (mpl version)</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>tabTrigger</key>
-	<string>import</string>
+	<string>plot</string>
 	<key>uuid</key>
-	<string>0E8DE6A6-3CB3-40BC-8A6B-D03584550369</string>
+	<string>F1DF93C6-B179-447E-BA39-17F96156DA94</string>
 </dict>
 </plist>
