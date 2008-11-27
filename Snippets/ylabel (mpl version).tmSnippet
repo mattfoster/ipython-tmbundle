@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>plt.ylabel("${1:ylabel}")
+$0</string>
+	<key>name</key>
+	<string>ylabel (mpl version)</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>plot</string>
+	<key>uuid</key>
+	<string>F598BBAF-52CD-4F88-80FB-90409E847E6B</string>
+</dict>
+</plist>
