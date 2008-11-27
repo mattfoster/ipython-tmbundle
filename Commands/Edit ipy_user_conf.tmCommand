@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#! /usr/bin/env bash
+
+open ~/.ipython/ipy_user_conf.py -a 'TextMate'
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^I</string>
+	<key>name</key>
+	<string>Edit ipy_user_conf</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>uuid</key>
+	<string>D6CFDC4F-4EAF-4778-BC29-16BF144B29CC</string>
+</dict>
+</plist>

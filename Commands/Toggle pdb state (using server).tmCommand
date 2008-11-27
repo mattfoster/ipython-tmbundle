@@ -25,7 +25,7 @@ else:
 # Only notify if there was a problem.
 if connected: 
 	notify_with_growl("IPython Script", 'Toggled pdb state')
-	client.send('quit\n')
+	client.send('quit')
 	client.disconnect()
 else:
 	notify_with_growl("IPython Script", 'Failed to connect to IPython session: ' + os.path.basename(sock))</string>

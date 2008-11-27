@@ -34,7 +34,7 @@ except KeyError:
 if not connected: 
 	notify_with_growl("IPython Script", 'Failed to connect to IPython session: ' + os.path.basename(sock))
 else:
-	client.send(text + '\n')
+	client.send(text)
 	client.disconnect()</string>
 	<key>input</key>
 	<string>none</string>

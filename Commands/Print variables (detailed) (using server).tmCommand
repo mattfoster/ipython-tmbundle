@@ -25,7 +25,7 @@ else:
 if not connected: 
 	notify_with_growl("IPython Script", 'Failed to connect to IPython session: ' + os.path.basename(sock))
 else:
-	client.send('%whos\n')
+	client.send('%whos')
 	client.disconnect()</string>
 	<key>input</key>
 	<string>none</string>
