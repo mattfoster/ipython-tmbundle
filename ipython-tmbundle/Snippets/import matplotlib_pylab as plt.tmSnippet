@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>import matplotlib.pylab as ${1:plt}
+
+$4</string>
+	<key>name</key>
+	<string>import matplotlib.pylab as plt</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>import</string>
+	<key>uuid</key>
+	<string>81A7BAFF-266F-40D9-AA60-2C2AC1BFF46C</string>
+</dict>
+</plist>

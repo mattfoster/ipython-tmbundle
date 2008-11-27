@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>from enthought.traits.api import Delegate, HasTraits, Instance, Int, Str</string>
+	<key>name</key>
+	<string>import enthought.traits.api import HasTraits etc</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>import</string>
+	<key>uuid</key>
+	<string>C169BB1E-7181-4BE8-BFF3-6BC62CC55CB0</string>
+</dict>
+</plist>
