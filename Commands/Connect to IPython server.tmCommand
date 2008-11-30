@@ -29,7 +29,7 @@ print """&lt;p&gt;If successful, you should see the follow text appear in your I
 
 &lt;p&gt;You should also see a Growl notification.&lt;/p&gt;
 
-&lt;o&gt;If you have more than one instance of IPYthon running, you may need to select which session to connect to. If this is the case, you will see a small dialog box. Note that ths dialog will no necessarily appear close to your editor window.&lt;/p&gt;
+&lt;o&gt;If you have more than one instance of IPython running, you may need to select which session to connect to. If this is the case, you will see a small dialog box. Note that ths dialog will no necessarily appear close to your editor window.&lt;/p&gt;
 
 """ % time_string
 
