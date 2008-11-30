@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>IPython Preferences</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>settings</key>
+	<dict>
+		<key>shellVariables</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>TM_IPYTHON_DEFAULT_SESSION</string>
+				<key>value</key>
+				<string>ipython-session</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>TM_IPYTHON_START_SERVER_COMMAND</string>
+				<key>value</key>
+				<string>import ipy_textmateserver; s = ipy_textmateserver.TextMateServer(); s.start()</string>
+			</dict>
+		</array>
+	</dict>
+	<key>uuid</key>
+	<string>428FDB39-B08D-42DB-BBB5-02988C7EFBF9</string>
+</dict>
+</plist>

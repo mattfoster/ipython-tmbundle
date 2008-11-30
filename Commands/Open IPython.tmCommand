@@ -21,10 +21,14 @@ try:
 except KeyError:
 	session='ipython-session'
 
+# Default to vimserver command for backwards compatbilty
 run = "import ipy_vimserver; ipy_vimserver.setup('%s')" % session
+run = os.environ.get('TM_IPYTHON_START_SERVER_COMMAND', run)
+
 open_in_terminal(run, command=cmd)
 
-notify_with_growl("IPython Script", 'Opened IPython with session name: %s' % session)</string>
+notify_with_growl("IPython Script", 'Opened IPython')
+# with session name: %s' % session)</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
