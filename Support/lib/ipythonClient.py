@@ -81,7 +81,7 @@ def determine_socket(path='~/.ipython'):
         return None
 
     if len(sockets) == 1:
-        os.path.join(path, sockets[0])
+        return os.path.join(path, sockets[0])
     
     try:
         import dialog
