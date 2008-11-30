@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>frange(${1:0}, ${2:10}${3: ,${4:1}})
+$0</string>
+	<key>name</key>
+	<string>frange (full)</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>tabTrigger</key>
+	<string>frange</string>
+	<key>uuid</key>
+	<string>1E53E18E-6FCE-4F34-A6C5-5ED120E91403</string>
+</dict>
+</plist>

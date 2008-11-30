@@ -21,11 +21,14 @@
 			<string>------------------------------------</string>
 			<string>E211761F-0605-434C-923C-074D76DB29F6</string>
 			<string>------------------------------------</string>
+			<string>CB0A79F5-977B-49F5-BACD-95974A08F01B</string>
+			<string>------------------------------------</string>
 			<string>9F3538AE-8DD0-420F-84CD-BDBE5E95A295</string>
 			<string>------------------------------------</string>
 			<string>6176018F-BF4E-4D35-9A6C-DD93DC9A6A58</string>
 			<string>------------------------------------</string>
 			<string>CD06D8D3-E1E0-4133-80EA-2827E2E61B18</string>
+			<string>------------------------------------</string>
 		</array>
 		<key>submenus</key>
 		<dict>
@@ -33,6 +36,9 @@
 			<dict>
 				<key>items</key>
 				<array>
+					<string>AE2AA07A-D864-4AD1-B951-D4EB164EF43A</string>
+					<string>638E506F-98ED-40BB-80EC-EA07F2F16DB4</string>
+					<string>1E53E18E-6FCE-4F34-A6C5-5ED120E91403</string>
 					<string>FC3109DC-DA1F-4BB5-ABDF-305409D5E918</string>
 					<string>6F16C2AD-F102-4F21-9EBF-40B6D67105DF</string>
 					<string>1253B7C6-FC01-403E-BEF6-CFC3906D2C6E</string>
@@ -61,6 +67,7 @@
 					<string>0E8DE6A6-3CB3-40BC-8A6B-D03584550369</string>
 					<string>81A7BAFF-266F-40D9-AA60-2C2AC1BFF46C</string>
 					<string>------------------------------------</string>
+					<string>E1D525FC-7795-4302-A94C-5A80D81D20EA</string>
 					<string>745D8AEA-162A-47DE-B8D9-DD1421E1CFEE</string>
 					<string>772E7887-64E1-432C-A357-C3C393D2E695</string>
 					<string>073808A8-B6C1-44EF-9678-90637F17B454</string>
@@ -137,6 +144,16 @@
 				<key>name</key>
 				<string>Snippets</string>
 			</dict>
+			<key>CB0A79F5-977B-49F5-BACD-95974A08F01B</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>9EE50B92-434E-49CD-8637-DE0D730C53FE</string>
+					<string>2FB2F00A-EE5C-4DF2-8EC8-F783F641AE12</string>
+				</array>
+				<key>name</key>
+				<string>General commands</string>
+			</dict>
 			<key>CD06D8D3-E1E0-4133-80EA-2827E2E61B18</key>
 			<dict>
 				<key>items</key>
@@ -171,6 +188,8 @@
 	<string>IPython</string>
 	<key>ordering</key>
 	<array>
+		<string>2FB2F00A-EE5C-4DF2-8EC8-F783F641AE12</string>
+		<string>9EE50B92-434E-49CD-8637-DE0D730C53FE</string>
 		<string>6B7352EB-E467-4C3B-8B6A-B268ACF9466E</string>
 		<string>B3FDAF77-EA3E-4F2E-97CB-E14CCF1A88CB</string>
 		<string>E625EBFA-49AD-42E5-BDCA-46AED36D0EA2</string>
@@ -217,6 +236,10 @@
 		<string>0E8DE6A6-3CB3-40BC-8A6B-D03584550369</string>
 		<string>073808A8-B6C1-44EF-9678-90637F17B454</string>
 		<string>F1DF93C6-B179-447E-BA39-17F96156DA94</string>
+		<string>AE2AA07A-D864-4AD1-B951-D4EB164EF43A</string>
+		<string>638E506F-98ED-40BB-80EC-EA07F2F16DB4</string>
+		<string>E1D525FC-7795-4302-A94C-5A80D81D20EA</string>
+		<string>1E53E18E-6FCE-4F34-A6C5-5ED120E91403</string>
 		<string>8753B90E-2104-44D8-B912-77C66DFC47D5</string>
 		<string>772E7887-64E1-432C-A357-C3C393D2E695</string>
 		<string>D059D386-97E9-4D08-8AA0-018AE840CE0A</string>
