@@ -10,7 +10,7 @@ $0</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>tabTrigger</key>
-	<string>plot</string>
+	<string>xt</string>
 	<key>uuid</key>
 	<string>58482474-DD4A-487F-B8BE-9B0DE0A4C83E</string>
 </dict>

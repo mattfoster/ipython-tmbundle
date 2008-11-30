@@ -3,7 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>import enthought.chaco.shell as ch</string>
+	<string>import enthought.chaco.shell as ch
+$0</string>
 	<key>name</key>
 	<string>import enthought.chaco.shell as ch</string>
 	<key>scope</key>
