@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env python
+
+import sys,os
+sys.path.append(os.environ['TM_SUPPORT_PATH'] + '/lib')
+
+import dialog
+
+def first_occurance(arr, str):
+    """find first_occurance of str in an array of strings"""
+    line_no = 0
+    # Find first instance of `sel`
+    for line in lines:
+        try:
+            line.index(sel)
+            line_no = lines.index(line)
+            break
+        except ValueError:
+            pass
+    
+    return line_no
+
+lines = sys.stdin.readlines()
+sel = ''
+var = ''
+
+try: 
+    sel = os.environ['TM_SELECTED_TEXT']
+except KeyError:
+    pass
+else:
+    line_no = first_occurance(lines, sel)-1
+    try:
+        var = dialog.get_string(text='Enter new variable name', 
+        prompt='Variable name:')
+    except AttributeError:
+        print '% Please update your support directory'
+        var = 'var'
+
+for line in lines[0:line_no]:
+	print line.replace(sel, var),
+
+print '%s = %s\n' % (var, sel),
+
+for line in lines[line_no:]:
+	print line.replace(sel, var),
+
+</string>
+	<key>input</key>
+	<string>document</string>
+	<key>keyEquivalent</key>
+	<string>^C</string>
+	<key>name</key>
+	<string>Introduce variable (throughout)</string>
+	<key>output</key>
+	<string>replaceDocument</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>uuid</key>
+	<string>9EE50B92-434E-49CD-8637-DE0D730C53FE</string>
+</dict>
+</plist>

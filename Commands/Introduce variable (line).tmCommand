@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env python
+
+import sys,os
+sys.path.append(os.environ['TM_SUPPORT_PATH'] + '/lib')
+
+import dialog
+
+line_no = int(os.environ.get('TM_LINE_NUMBER'))-1
+lines = sys.stdin.readlines()
+
+try: 
+    sel = os.environ['TM_SELECTED_TEXT']
+except KeyError:
+    pass
+else:
+    try:
+        var = dialog.get_string(text='Enter new variable name', 
+        prompt='Variable name:')
+    except AttributeError:
+        print '% Please update your support directory'
+        var = 'var'
+
+    lines[line_no] = lines[line_no].replace(sel, var)
+    lines.insert(line_no, '%s = %s\n' % (var, sel))
+
+for line in lines:
+	print line,</string>
+	<key>input</key>
+	<string>document</string>
+	<key>keyEquivalent</key>
+	<string>^C</string>
+	<key>name</key>
+	<string>Introduce variable (line)</string>
+	<key>output</key>
+	<string>replaceDocument</string>
+	<key>scope</key>
+	<string>source.python</string>
+	<key>uuid</key>
+	<string>2FB2F00A-EE5C-4DF2-8EC8-F783F641AE12</string>
+</dict>
+</plist>
