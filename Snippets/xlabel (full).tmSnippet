@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>plt.ylabel("${1:ylabel}")
+	<string>xlabel("${1:xlabel}")
 $0</string>
 	<key>name</key>
-	<string>ylabel (mpl version)</string>
+	<string>xlabel (full)</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>tabTrigger</key>
-	<string>plot</string>
+	<string>xlabel</string>
 	<key>uuid</key>
-	<string>F598BBAF-52CD-4F88-80FB-90409E847E6B</string>
+	<string>1253B7C6-FC01-403E-BEF6-CFC3906D2C6E</string>
 </dict>
 </plist>
