@@ -9,39 +9,24 @@
 
 import os
 import sys
-import subprocess
 
 sys.path.append(os.environ['TM_BUNDLE_SUPPORT'] + '/lib')
-from ipythonClient import remove_sockets
 
-def get_confirmation():
-    """get confirmation"""
+from ipythonDialog import get_confirmation, html_tooltip
+from ipythonClient import list_sockets, remove_sockets
 
-    support_path     = os.environ.get('TM_SUPPORT_PATH')
-    cocoa_dialog     = os.path.join(support_path, "bin/CocoaDialog.app/Contents/MacOS/CocoaDialog")
+body="""There are socket files in the socket directory. 
+They will be removed if you continue. You cannot undo this action."""
 
-    dtype            = "msgbox"
-    text             = '--text "This command will remove all sockets from .ipythonrc"'
-    icon             = '--icon "x"' 
-    informative_text = '--informative-text "There are files in the socket directory. They will be removed if you continue."' 
-    buttons          = '--button1 "Cancel Deletion" --button2 "Delete all"'
+title='This command will remove all sockets from ~/.ipythonrc'
 
-    # Join args to build command.
-    args = ' '.join(["'%s'" % cocoa_dialog, dtype, text, icon, informative_text, buttons])
-
-    output = os.popen(args, 'r').read()
-    
-    if int(output) == 2:
-        return True
-    else: 
-        return False
-
-# Should we ask about this?
-if get_confirmation():
+if not list_sockets():
+    html_tooltip(text='No sockets to remove')
+elif get_confirmation(body_text=body, title_text=title):
     remove_sockets()
-    print 'Removed sockets'
+    html_tooltip(text='Removed sockets')
 else:
-    print 'Cancelled operation'</string>
+    html_tooltip(text='Cancelled operation')</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
@@ -49,7 +34,7 @@ else:
 	<key>name</key>
 	<string>Remove sockets</string>
 	<key>output</key>
-	<string>showAsTooltip</string>
+	<string>afterSelectedText</string>
 	<key>scope</key>
 	<string>source.python,</string>
 	<key>uuid</key>
