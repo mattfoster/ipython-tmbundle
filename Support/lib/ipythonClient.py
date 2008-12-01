@@ -93,3 +93,12 @@ def determine_socket(path='~/.ipython'):
 
     return os.path.join(path, sock)
         
+def find_server_then_connect():
+    """Find and connect to a socket server"""
+    sock = determine_socket()
+    if sock == None:
+    	connected = False
+    else:
+    	connected = connect(sock)
+    return connected
+    

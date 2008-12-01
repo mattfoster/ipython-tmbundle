@@ -4,8 +4,18 @@
 
 import os
 
-# Utility functions:
+def selection_or_line():
+    """Return selected text, the current line or None if there's a problme"""
 
+    try:
+        text=os.environ['TM_SELECTED_TEXT']
+    except KeyError:
+        text=os.environ.get('TM_CURRENT_LINE')
+
+    return text
+
+
+# Utility functions:
 def get_ipython_cmd():
     """docstring for get_ipython_cmd"""
     try:
