@@ -6,30 +6,28 @@
 	<string>saveActiveFile</string>
 	<key>command</key>
 	<string>#!/usr/bin/env python
-# Command to test the use of a dialog.
 
 import sys, os
 sys.path.append(os.environ['TM_SUPPORT_PATH'] + '/lib')
 sys.path.append(os.environ['TM_BUNDLE_SUPPORT'] + '/lib')
-import dialog
-from ipythonMate import *
+
+from ipythonMate import notify_with_growl
+from ipythonDialog import html_tooltip
 import ipythonClient as client
 
-sock = client.determine_socket()
-if sock == None:
-	connected = False
-else:
-	connected = client.connect(sock)
+try:
+	run_options = os.environ['TM_RUN_OPTIONS'] + ' '
+except KeyError:
+	run_options = '-e -i -n '
 
-text="%run -e -i -n " + os.environ.get('TM_FILEPATH')
+text='%run ' + run_options + '  ' + os.environ.get('TM_FILEPATH')
 
-if connected: 
-	notify_with_growl("IPython Script", 'Ran ' + os.path.basename(os.environ.get('TM_FILEPATH')))
+if client.find_server_then_connect(): 
 	client.send(text)
 	client.disconnect()
+	notify_with_growl("IPython Script", 'Ran ' + os.path.basename(os.environ.get('TM_FILEPATH')) + ' through profiler')
 else:
-	notify_with_growl("IPython Script", 'Failed to connect to IPython session')
-</string>
+	notify_with_growl("IPython Script", 'Failed to connect to IPython session: ' + os.path.basename(sock))</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>

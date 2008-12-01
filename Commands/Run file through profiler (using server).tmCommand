@@ -15,12 +15,6 @@ import dialog
 from ipythonMate import *
 import ipythonClient as client
 
-sock = client.determine_socket()
-if sock == None:
-	connected = False
-else:
-	connected = client.connect(sock)
-
 try:
 	prun_options = os.environ['TM_PRUN_OPTIONS'] + ' '
 except KeyError:
@@ -33,12 +27,12 @@ except KeyError:
 
 text='%run ' + run_options + '-p ' + prun_options + '  ' + os.environ.get('TM_FILEPATH')
 
-if connected: 
+if client.find_server_then_connect(): 
 	client.send(text)
 	client.disconnect()
 	notify_with_growl("IPython Script", 'Ran ' + os.path.basename(os.environ.get('TM_FILEPATH')) + ' through profiler')
 else:
-	notify_with_growl("IPython Script", 'Failed to connect to IPython session: ' + os.path.basename(sock))</string>
+	notify_with_growl("IPython Script", 'Failed to connect to IPython session')</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
@@ -46,7 +40,7 @@ else:
 	<key>name</key>
 	<string>Run file through profiler</string>
 	<key>output</key>
-	<string>discard</string>
+	<string>afterSelectedText</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>uuid</key>

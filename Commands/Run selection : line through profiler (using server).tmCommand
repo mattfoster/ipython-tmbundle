@@ -6,40 +6,33 @@
 	<string>saveActiveFile</string>
 	<key>command</key>
 	<string>#!/usr/bin/env python
-# Command to test the use of a dialog.
 
 import sys, os
 sys.path.append(os.environ['TM_SUPPORT_PATH'] + '/lib')
 sys.path.append(os.environ['TM_BUNDLE_SUPPORT'] + '/lib')
-import dialog
-from ipythonMate import *
+
+from ipythonMate import notify_with_growl, selection_or_line
+from ipythonDialog import html_tooltip
 import ipythonClient as client
-
-sock = client.determine_socket()
-if sock == None:
-	connected = False
-else:
-	connected = client.connect(sock)
-
-try:
-  try:
-    text=os.environ['TM_SELECTED_TEXT']
-  except KeyError:
-    text=os.environ['TM_CURRENT_LINE']
-except KeyError:
-  print "Error executing selection/line."
-  text="print 'Error executing selection/line.'"
-
+    
 try:
 	prun_options = os.environ['TM_PRUN_OPTIONS'] + ' '
 except KeyError:
 	prun_options = ''
 
-text = '%prun ' + prun_options + text
+# Get the current selection or line.
+text = selection_or_line()
 
+if not text:
+    html_tooltip("&lt;p&gt;Couldn't get selection/line.&lt;/p&gt;")
+    connected = False
+else:
+    text = '%prun ' + prun_options + text
+    connected = client.find_server_then_connect()
+    
 # Only notify if there was a problem.
 if not connected: 
-	notify_with_growl("IPython Script", 'Failed to connect to IPython session: ' + os.path.basename(sock))
+	notify_with_growl("IPython Script", 'Failed to connect to IPython session')
 else:
 	client.send(text)
 	client.disconnect()</string>
@@ -50,7 +43,7 @@ else:
 	<key>name</key>
 	<string>Run selection / line through profiler</string>
 	<key>output</key>
-	<string>discard</string>
+	<string>afterSelectedText</string>
 	<key>scope</key>
 	<string>source.python</string>
 	<key>uuid</key>
