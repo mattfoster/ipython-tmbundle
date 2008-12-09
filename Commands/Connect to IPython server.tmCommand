@@ -35,16 +35,8 @@ print """&lt;p&gt;If successful, you should see the follow text appear in your I
 
 print webpreview.html_footer()
 
-sock = client.determine_socket()
-if sock == None:
-	connected = False
-else:
-	connected = client.connect(sock)
-
-if connected: 
-	notify_with_growl("IPython Script", 'Connected to IPython session: ' + os.path.basename(sock))
-	client.send('print "TextMate Connection established at %s"\n\r' % time_string)
-	client.disconnect()
+if client.find_server_then_connect('print "TextMate Connection established at %s"\n\r' % time_string):
+	notify_with_growl("IPython Script", 'Connected to IPython session')
 else:
 	notify_with_growl("IPython Script", 'Failed to connect to IPython session')
 </string>

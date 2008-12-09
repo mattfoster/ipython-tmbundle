@@ -20,16 +20,12 @@ text = selection_or_line()
 
 if not text:
     html_tooltip("&lt;p&gt;Couldn't get selection/line.&lt;/p&gt;")
-    connected = False
+    exit(1) 
+
+if client.find_server_then_connect(text):
+	pass
 else:
-    connected = client.find_server_then_connect()
-    
-# Only notify if there was a problem.
-if not connected: 
-	notify_with_growl("IPython Script", 'Failed to connect to IPython session')
-else:
-	client.send(text)
-	client.disconnect()</string>
+	notify_with_growl("IPython Script", 'Failed to connect to IPython session')</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
