@@ -2,7 +2,7 @@
 
 The IPython Bundle is a collection of commands designed to help you work with IPython form within TextMate. It was started after seeing [UsingIPythonWithTextMate](http://ipython.scipy.org/moin/Cookbook/UsingIPythonWithTextMate "Cookbook/UsingIPythonWithTextMate - IPython"), which contained the core commands on which very early versions of this bundle were based. Kudos to Barry Wark for writing the commands on the wiki page.
 
-The bundle now uses the socket based server (`ipy_vimserver.py`) by Erich Heine, with a modified version of his client commands being used in the bundle. Please see the section 'Socket Support' for more information on how to set up the IPython side of things. The applescript commands are still available as a backup, and are used to interact with `pdb`. If you prefer the applescript based approack over the socket based approach, the commands are available in the `AppleScript Commands` group.
+The bundle now uses a socket based server based on [Twisted](http://twistedmatrix.com/trac/ "Twisted"). You may need to run `sudo easy_install twisted` for this to work. Please see the section 'Socket Support' for more information on how to set up the IPython side of things. The applescript commands are still available as a backup, and are used to interact with `pdb`. If you prefer the applescript based approack over the socket based approach, the commands are available in the `AppleScript Commands` group.
 
 Currently most commands are aliased to the shortcut `⌃⇧I` (Shift + Ctrl + I), and will only activate when the scope is `source.python`. The commands `Edit ipythonrc` and `View config directory` are available in all scopes. The exceptions to this rule are the commands for opening IPython and editing configuration files.
 
@@ -23,6 +23,8 @@ To set up a socket server, fire up IPython, and type:
 
 This will create a unix socket called `socketname`, in `~/.ipython/` which you can then connect to using the bundle's `Connect to IPYthon server command`.
 
+Alternatively, if you're using an IPython version with a generic editor branch, start an editor server session. You can set `TM_IPYTHON_START_SERVER_COMMAND` to the commands needed to start the kind of session you need.
+
 This bundle should detect the existence of multiple sessions and ask which to
 connect to. Please note it is not currently possible to send text to multiple
 IPython servers at once, but there is no reason why it shouldn't be possible in future.
@@ -39,7 +41,7 @@ Will give you a time-dependent socket name (with no extra `.` chars).
 # Configuration Files
 
 A simple language grammar for highlighting `ipythonrc` files in also included.
-You can switch the language grammar to the `ipythonrc` type by pressing `⌃⌥⇧I` (Shift + Cmd + Alt + I). A bundle command is also available for easy editing of the file (provided it lives under `~/.ipython`).
+You can switch the language grammar to the `ipythonrc` type by pressing `⌃⌥⇧I` (Shift + Cmd + Alt + I). A bundle command is also available for easy editing of the `ipythonrc` and `ipy_user.conf` files (provided they live under `~/.ipython`).
 
 
 # Installation
