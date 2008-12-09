@@ -29,11 +29,11 @@ class EditorClientFactory(ClientFactory):
        self.end   = end
 
     def clientConnectionFailed(self, connector, reason):
-        print 'connection failed:', reason.getErrorMessage()
+        # print 'connection failed:', reason.getErrorMessage()
         reactor.stop()
 
     def clientConnectionLost(self, connector, reason):
-        print 'connection lost:', reason.getErrorMessage()
+        # print 'connection lost:', reason.getErrorMessage()
         reactor.stop()
 
 def sendlines(socket, lines=''):
