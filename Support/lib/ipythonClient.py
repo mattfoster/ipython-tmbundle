@@ -1,59 +1,12 @@
-import socket
 import os
 
 from os.path import expanduser, join
 from stat import ST_MODE, S_ISSOCK
+from twisted_editor_client import sendlines
 
-# Adapted from ipy.vim (vim / ipython server)
-# In TextMate, we can't rely on environment variables set in a terminal
+default_path=expanduser('~/.ipython/')
 
-IPYSERVER = None
-
-def check_server():
-    global IPYSERVER
-    if IPYSERVER:
-        return True
-    else:
-        return False
-
-# connect to the ipython server, if we need to
-def connect(server):
-    """Connect to the server given in the string `server` """
-    # print "Connecting to", expanduser(server)
-    global IPYSERVER
-    if check_server():
-        return
-    try:
-        IPYSERVER = socket.socket(socket.AF_UNIX)
-        IPYSERVER.connect(expanduser(server))
-    except:
-        IPYSERVER = None
-                
-    if IPYSERVER != None:
-        return True
-    else:
-        return False
-
-def disconnect():
-    if IPYSERVER:
-        IPYSERVER.close()
-
-def send(cmd):
-    x = 0
-    while True:
-        x += IPYSERVER.send(cmd)
-        if x < len(cmd):
-            cmd = cmd[x:]
-        else:
-            break
-
-def run_this_file(filename):
-    if check_server():
-        send('run %s' % (filename))
-    else:
-        raise Exception, "Not connected to an IPython server"
-
-def list_sockets(path='~/.ipython/'):
+def list_sockets(path=default_path):
     """list the sockets in a given directory"""
     path = expanduser(path)
     files = os.listdir(path)
@@ -65,7 +18,7 @@ def list_sockets(path='~/.ipython/'):
 
     return filter(is_sock, files)
 
-def remove_sockets(path='~/.ipython'):
+def remove_sockets(path=default_path):
     """Remove all sockets in a given directory. 
     Potentially destructive!"""
     path = os.path.expanduser(path)
@@ -73,8 +26,8 @@ def remove_sockets(path='~/.ipython'):
     for sock in socks:
         os.remove(os.path.join(path, sock))
 
-def determine_socket(path='~/.ipython'):
-    """Find out which socket to connect to"""
+def determine_socket(path=default_path):
+    """Determine the socket with which to connect."""
     sockets = list_sockets(path)
 
     if not len(sockets):
@@ -93,12 +46,14 @@ def determine_socket(path='~/.ipython'):
 
     return os.path.join(path, sock)
         
-def find_server_then_connect():
-    """Find and connect to a socket server"""
+def find_server_then_connect(sock, lines):
+    """Determine which socket to connect to, then send `lines`
+    
+    Return `False` if there was a problem, otherwise `True`.
+    """
     sock = determine_socket()
-    if sock == None:
-    	connected = False
+    if not sock:
+    	return False
     else:
-    	connected = connect(sock)
-    return connected
+    	return sendlines(sock, lines)
     
