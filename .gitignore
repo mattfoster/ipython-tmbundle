@@ -1,2 +1,2 @@
-Support/lib/ipythonMate.pyc
-Support/lib/ipythonClient.pyc
+Support/lib/*.pyc
+Tests/*.pyc
