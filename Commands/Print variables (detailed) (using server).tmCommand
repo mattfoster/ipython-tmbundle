@@ -14,16 +14,9 @@ sys.path.append(os.environ['TM_BUNDLE_SUPPORT'] + '/lib')
 from ipythonMate import notify_with_growl
 import ipythonClient as client
 
-connected = client.find_server_then_connect()
-
 # Only notify if there was a problem.
-if not connected: 
+if not client.find_server_then_connect('%whos'):
     notify_with_growl("IPython Script", 'Failed to connect to IPython session')
-else:
-	client.send('%whos')
-	client.disconnect()
-
-
 </string>
 	<key>input</key>
 	<string>none</string>

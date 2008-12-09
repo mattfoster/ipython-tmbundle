@@ -27,9 +27,8 @@ except KeyError:
 
 text='%run ' + run_options + '-p ' + prun_options + '  ' + os.environ.get('TM_FILEPATH')
 
-if client.find_server_then_connect(): 
-	client.send(text)
-	client.disconnect()
+# Only notify if there was a problem.
+if client.find_server_then_connect(text):
 	notify_with_growl("IPython Script", 'Ran ' + os.path.basename(os.environ.get('TM_FILEPATH')) + ' through profiler')
 else:
 	notify_with_growl("IPython Script", 'Failed to connect to IPython session')</string>

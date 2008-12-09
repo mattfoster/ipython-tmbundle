@@ -28,14 +28,10 @@ if not text:
     connected = False
 else:
     text = '%prun ' + prun_options + text
-    connected = client.find_server_then_connect()
     
 # Only notify if there was a problem.
-if not connected: 
-	notify_with_growl("IPython Script", 'Failed to connect to IPython session')
-else:
-	client.send(text)
-	client.disconnect()</string>
+if not client.find_server_then_connect(text):
+	notify_with_growl("IPython Script", 'Failed to connect to IPython session')</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
