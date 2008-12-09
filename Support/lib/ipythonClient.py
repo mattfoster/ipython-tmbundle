@@ -46,7 +46,7 @@ def determine_socket(path=default_path):
 
     return os.path.join(path, sock)
         
-def find_server_then_connect(sock, lines):
+def find_server_then_connect(lines):
     """Determine which socket to connect to, then send `lines`
     
     Return `False` if there was a problem, otherwise `True`.
